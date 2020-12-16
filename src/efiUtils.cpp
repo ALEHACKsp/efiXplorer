@@ -122,7 +122,6 @@ uint8_t getArch() {
 // Get input file type (PEI or DXE-like). No reliable way to determine FFS
 // file type given only its PE/TE image section, so hello heuristics
 uint8_t guessFileType(uint8_t arch, vector<json> *allGuids) {
-    uint8_t arch = getArch();
     if (arch == UEFI) {
         return FTYPE_DXE_AND_THE_LIKE;
     }
